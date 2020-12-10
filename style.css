@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 40px;
+}
+
+.header img{
+  height: 40px;
+}
+
+.header-lists ul{
+  display: flex;
+  list-style: none;
+}
+
+.header-lists ul li a{
+  text-decoration: none;
+  margin-left: 16px;
+  color: black;
+  font-weight: 600;
+}
+
+.home {
+  background-image: url('/img/sky.png');
+  height: 85vh;
+}
+
+.home-desc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  padding-top: 9em;
+}
+
+.home-desc img {
+  max-width: 800px;
+}
+
+.home-desc h2 {
+  letter-spacing: 1.25em;
+  padding-top: 0.25em;
+  font-weight: 300;
+  font-size: 26px;
+}
+
+.about {
+  height: 100vh;
+}
