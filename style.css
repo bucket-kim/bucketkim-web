@@ -1,3 +1,416 @@
-.navbar__logo a img{
+:root {
+  --color-white: white;
+  --color-gray: gray;
+  --color-blue: #1d259b;
+  --color-medblue: #849ad6;
+  --color-lightblue: #d4ddf8;
+  --color-black: black;
+
+}
+
+body {
+  font-family: 'Open Sans';
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+*:focus {
+  outline: 0 !important;
+}
+/* navbar */
+
+.navbar__logo img {
   height: 40px;
+  filter: invert(100%);
+}
+
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: #000000;
+  background-size: cover;
+  background-position: top;
+  align-items: center;
+  padding: 20px;
+  position: relative;
+}
+
+ul {
+  list-style: none;
+}
+
+h2 {
+  margin: 16px;
+}
+
+h3 {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+hr {
+  margin-left: 5%;
+  margin-right: 5%;
+  border: var(--color-lightblue) 1px solid;
+
+}
+
+.navbar__menu {
+  display: flex;
+}
+
+.navbar__menu__item {
+  padding: 8px;
+  margin-left: 8px;
+  color: white;
+  cursor: pointer;
+  transition: 0.25s;
+
+}
+
+.navbar__menu__item.active {
+  border: 1px solid white;
+}
+
+.navbar__menu__item:hover {
+  background-color: white;
+  border-radius: 4px;
+  color: #2f65ae;
+  
+}
+
+/* home */
+#home {
+  background-image: url('/img/wall.png');
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  color: var(--color-white);
+}
+
+.home__main__title {
+  width: 800px;
+  margin-top: 6em;
+}
+
+
+.home__description h1{
+  font-weight: 300;
+  font-size: 28px;
+  letter-spacing: 1em;
+  padding-bottom: 0.75em;
+}
+
+.home__description button {
+  font-weight: bold;
+  font-size: 24px;
+  margin-bottom: 3em;
+  padding: 12px;
+  border: white 1px solid;
+  border-radius: 4px;
+  background-color: transparent;
+  color: var(--color-white);
+  letter-spacing: .1em;
+  cursor: pointer;
+  outline: none;
+  transition: 0.25s ease-in;
+}
+
+.home__description button:hover {
+  transform: scale(1.05);
+  color: #2f65ae;
+  background-color: white;
+}
+
+/* About */
+.section {
+  text-align: center;
+  padding: 50px;
+  margin: auto;
+}
+
+.section__container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.about__profile {
+  height: 15em;
+  border-radius: 60%;
+  margin: 20px;
+  padding-bottom: 16px;
+  
+}
+
+.section h1 {
+  font-size: 60 px;
+  margin-bottom: 24px;
+  font-weight: 600;
+}
+
+.about__majors {
+  display: flex;
+  justify-content: space-between;
+  margin: 80px 0;;
+}
+
+.major__icon {
+  width: 170px;
+  height: 170px;
+  font-size: 70px;
+  line-height: 170px;
+  margin: auto;
+  border: 1px solid var(--color-medblue);
+  border-radius: 50%;
+  margin-bottom: 16px;
+  color: var(--color-medblue);
+}
+
+.major__icon i {
+  transition: 0.25s all ease;
+}
+
+.major__icon:hover i {
+  color: var(--color-blue);
+  transform: scale(1.1);
+}
+
+.major__title, .major__desc {
+  color: var(--color-gray);
+  margin-top: 12px;
+}
+
+
+.job__logo {
+  height: 40px;
+}
+
+.about__jobs {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 24px;
+}
+
+.job__image {
+  display: flex;
+  flex-direction: column;
+  margin-right: 5em;
+}
+
+.job__logo {
+  margin: 16px auto;
+}
+
+.job__desc {
+  margin: 30px auto;
+  text-align: left;
+}
+
+.job__name, .job__period {
+  color: var(--color-gray);
+}
+
+.job__period {
+  font-size: small;
+  padding-top: 4px;
+}
+
+/* skills */
+
+#skills {
+  background-color: #ece7eb;
+}
+
+.skillset {
+  display: flex;
+  background-color: var(--color-lightblue);
+  border: 10px solid var(--color-blue);
+}
+
+.skillset__left {
+  flex-basis: 60%;
+  background-color: var(--color-medblue);
+}
+
+.skillset__right {
+  flex-basis: 40%;
+}
+
+.skill {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  align-items: center;
+}
+
+.skillset__title {
+  font-size: 28px;
+  color: white;
+  background-color: rgba(30, 37, 155, 0.5);
+}
+
+.skill__desc {
+  word-spacing: 0.5em;
+  color: white;
+}
+
+.skill__level {
+  font-weight: 400;
+  font-size: 24px;
+  margin-bottom: 0.5em;
+
+}
+
+.etc__list {
+  margin: 16px 0;
+}
+
+.tools__list {
+  margin: 16px 0;
+}
+
+/* Work */
+
+.work__categories {
+  margin: 40px;
+}
+
+#works h3 {
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.category__btn {
+  border: 1px solid lightgray;
+  border-radius: 4px;
+  background-color: transparent;
+  font-size: 20px;
+  padding: 8px 48px;
+}
+
+.category__btn.active, 
+.category__btn:hover {
+  background-color: var(--color-medblue);
+  color: white;
+  outline: none;
+  border: none;
+}
+
+.category__count {
+  background-color: rgb(255, 82, 29);
+  border-radius: 50%;
+  color: white;
+  height: 24px;
+  width: 24px;
+  line-height: 24px;
+  position: relative;
+  display: inline-block;
+  top: -30px;
+  opacity: 0;
+  transition: all ease-in 0.3s;
+  margin-left: 8px;
+  border: none;
+}
+
+.category__btn.active .category__count, 
+.category__btn:hover .category__count{
+  opacity: 1;
+  top: 0;
+  border: none;
+  outline: none;
+}
+
+.work__projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.project {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2px;
+  position: relative;
+}
+
+.project__img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.project__desc {
+  position: absolute;
+  background-color: rgba(0, 0, 0, .5);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 0;
+  transition: all ease-in 0.3s;
+}
+
+.project__desc h3, .project__desc span {
+  color: white;
+}
+
+.project__desc h3::after {
+  content: '';
+  display: block;
+  position: relative;
+  left: 38.5%;
+  width: 3em;
+  height: 2px;
+  margin-top: 8px;
+  background-color: lightgray;
+}
+
+.project:hover .project__desc {
+  opacity: 1;
+}
+
+/* Contact */
+#contact {
+  background-color: #355275;
+}
+
+.contact__title, 
+.contact__email, 
+.contact__links a, 
+.contact__rights {
+  color: white;
+}
+
+.contact__title {
+  margin: 16px 0;
+  font-size: 46px;
+  font-weight: 800;
+}
+
+.contact__links{
+  font-size: 1.5em;
+}
+
+.contact__links a i{
+  margin: 0 16px;
+  transition: all 0.1s ease-in;
+}
+
+.contact__links a i:hover{
+  transform: scale(1.15);
+}
+
+.contact__rights {
+  font-weight: 100;
+  font-size: small;
+  margin-top: 20px;
 }

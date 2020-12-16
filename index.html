@@ -11,6 +11,8 @@
   <link rel="stylesheet" href="style.css">
   <script src="https://kit.fontawesome.com/f031754653.js" crossorigin="anonymous"></script>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;700&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
@@ -24,7 +26,7 @@
       </a>
     </div>
     <div class="navbar__menu">
-      <ul class="navbar__muni">
+      <ul class="navbar__menu">
         <li class="navbar__menu__item">HOME</li>
         <li class="navbar__menu__item">ABOUT</li>
         <li class="navbar__menu__item">SKILLS</li>
@@ -34,18 +36,18 @@
     </div>
   </nav>
   <section id="home">
-    <img src="/img/sky.png" alt="" class="home__image">
     <img src="/img/home_title.png" alt="" class="home__main__title">
-    <div class="home__descriptiotn">
+    <div class="home__description">
       <h1>WEB DEVELOPER</h1>
       <h1>DESIGNER</h1>
       <button class="home__contact">Contact Me</button>
     </div>
   </section>
   <!-- about -->
-  <section id="about">
+  <section id="about" class="section section__container">
     <h1>About Me</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet magni ea fugiat, deleniti alias quasi odit non in quia, repellendus cumque? Temporibus provident, rerum magni at nisi doloremque adipisci dicta!Dignissimos natus obcaecati tenetur. Ipsa provident dolores expedita ab quae, dolor officia recusandae itaque quisquam voluptates laboriosam, magnam a fuga atque adipisci error magni sint. Distinctio ad soluta pariatur nisi.
+    <img src="/img/profile.jpeg" alt="" class="about__profile">
+    <p>	Brian came from a family of creativity, diligent, and humble mind Korean family, enthusiastic artist/designer and web developer. He has a life style of a dancer and martial artist. Currently Brian lives in New York, constantly searching for new inspirations to keep him creative. Living in New York got him to be more flexible in creative thinking, adapting to various environments, and able to take any challenges to solve problems.
     </p>
     <div class="about__majors">
       <div class="major">
@@ -53,7 +55,9 @@
           <i class="fab fa-html5"></i>
         </div>
         <div class="major__title">
-          Front-End
+          <h2>
+            Front-End
+          </h2>
         </div>
         <div class="major__desc">
           HTML, CSS, Javascript,<br> React, Web APIs
@@ -64,7 +68,9 @@
           <i class="fas fa-server"></i>
         </div>
         <div class="major__title">
-          Back-End
+          <h2>
+            Back-End
+          </h2>
         </div>
         <div class="major__desc">
           Firebase, Rest API, Node JS,<br> Mongo DB
@@ -75,7 +81,9 @@
           <i class="fas fa-cube"></i>
         </div>
         <div class="major__title">
-          Design
+          <h2>
+            Design
+          </h2>
         </div>
         <div class="major__desc">
           3D, Z-brush, Photoshop,<br> After Effects, Custom Design
@@ -83,49 +91,77 @@
       </div>
     </div>
     <div class="about__jobs">
-      <div class="job">
+      <div class="job__image">
         <img src="/img/wayfair.jpg" alt="" class="job__logo">
-        <p class="job__name">Worked at Wayfair as 3D Artist</p>
-        <p class="job__period">2018 April -2019 May</p>
+        <img src="/img/google.png" alt="" class="job__logo">
+        <img src="/img/google.png" alt="" class="job__logo">
+        <img src="/img/themolecule.png" alt="" class="job__logo">
       </div>
+      <div class="job__infos">
+        <div class="job__desc">
+          <p class="job__name">Worked at Wayfair as 3D Artist</p>
+          <p class="job__period">2018 April -2019 May</p>
+        </div>
+        <div class="job__desc">
+          <p class="job__name">Worked with Daydream Team as 3D Artist</p>
+          <p class="job__period">2017 May -2017 August</p>
+        </div>
+        <div class="job__desc">
+          <p class="job__name">Worked on VR app at Google as 3D Artist</p>
+          <p class="job__period">2016 July -2017 January</p>
+        </div>
+        <div class="job__desc">
+          <p class="job__name">Worked at The Molecule as 3D Generalist</p>
+          <p class="job__period">2016 January -2016 Februrary</p>
+        </div>
       </div>
     </div>
   </section>
   <!-- works -->
-  <section id="skills">
+  <section id="skills" class="section">
+    <div class="section__container">
     <h1>Skills</h1>
     <h2>Skill Attributes</h2>
     <p>I will type my skills and experiences later</p>
     <div class="skillset">
       <div class="skillset__left">
-        <h3 class="skillset__title">Skills</h3>
+        <h3 class="skillset__title">ProgrammingSkills</h3>
         <div class="skill">
           <div class="skill__level">
             <span>Expert</span>
           </div>
           <div class="skill__desc">
-            <span>HTML, CSS, Javascript</span>
+            <span>
+              HTML, CSS, Javascript
+            </span>
           </div>
         </div>
+        <hr>
         <div class="skill">
           <div class="skill__level">
             <span>Moderate</span>
           </div>
           <div class="skill__desc">
-            <span>React, Python </span>
+            <span>
+              React, Python
+            </span>
           </div>
         </div>
+        <hr>
         <div class="skill">
           <div class="skill__level">
             <span>Novice</span>
           </div>
           <div class="skill__desc">
-            <span>Node JS, Firebase, Mongo DB</span>
+            <span>
+              NodeJS, Firebase, MongoDB
+            </span>
           </div>
         </div>
       </div>
       <div class="skillset__right">
         <div class="tools">
+          <h3 class="skillset__title">Tools</h3>
           <ul class="tools__list">
             <li><span>Visual Studio Code</span></li>
             <li><span>React</span></li>
@@ -135,6 +171,7 @@
           </ul>
         </div>
         <div class="etc">
+          <h3 class="skillset__title">Other Skills</h3>
           <ul class="etc__list">
             <li><span>Custom Design</span></li>
             <li><span>Dance</span></li>
@@ -143,13 +180,14 @@
         </div>
       </div>
     </div>
+  </div>
   </section>
   <!-- blog -->
-  <section id="works">
+  <section id="works" class="section section__container">
     <h1>My Works</h1>
     <h3>Projects</h3>
     <div class="work__categories">
-      <button class="category__btn">
+      <button class="category__btn active">
         All<span class="category__count">8</span>
       </button>
       <button class="category__btn">
@@ -162,39 +200,39 @@
     <div class="work__projects">
       <a 
       href="https://covid-19-tracker-4d67b.web.app/" 
-      class="project__img"
+      class="project"
       target="blank">
-      <img src="/img/covid sketch.png" alt="">
+      <img src="/img/covidApp.png" alt="" class="project__img">
       <div class="project__desc">
         <h3>COVID-19 Tracker</h3>
-        <span>Made COVID-19 trakcing app with Javascript, React, Web API to get data</span>
+        <span>COVID-19 app with Javascript, React, Web API to get data</span>
       </div>
     </a>
     <a 
       href="https://airbnb-clone-b6648.web.app/" 
-      class="project__img"
+      class="project"
       target="blank">
-      <img src="/img/air-bnb sketch.png" alt="">
+      <img src="/img/air-bnb sketch.png" alt="" class="project__img">
       <div class="project__desc">
         <h3>Air Bnb Clone</h3>
-        <span>Built a front-end Air Bnb Window, using Javascript and React, with date range picker</span>
+        <span>Air Bnb Clone, using Javascript and React, with date range picker</span>
       </div>
     </a>
     <a 
-      href="https://netflix-clone-bk.web.app/" 
-      class="project__img"
+      href="https://hulu-clone-68b18.web.app/" 
+      class="project"
       target="blank">
-      <img src="/img/netflix-clone.png" alt="">
+      <img src="/img/HuluClone.png" alt="" class="project__img">
       <div class="project__desc">
-        <h3>Netflix Clone</h3>
-        <span>Built a front-end Netflix Clone, using Javascript and React, using movie data API</span>
+        <h3>Hulu Clone</h3>
+        <span>Rront-end Hulu Clone, using Javascript and React, using movie data API</span>
       </div>
     </a>
     </div>
   </section>
   <!-- contact -->
-  <section id="contact">
-    <h1 class="contact__title">Hit me up!</h1>
+  <section id="contact" class="section">
+    <h1 class="contact__title">Let's Chat!</h1>
     <h2 class="contact__email">brian.kyounghoon.kim@gmail.com</h2>
     <div class="contact__links">
       <a href="https://github.com/bballrain07">
