@@ -336,8 +336,11 @@ hr {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 2px;
+  margin: 4px;
   position: relative;
+  border-radius: 4px;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, .2);
+  overflow: hidden;
 }
 
 .project__img {
@@ -357,6 +360,7 @@ hr {
   justify-content: center;
   opacity: 0;
   transition: all ease-in 0.3s;
+  border-radius: 4px;
 }
 
 .project__desc h3, .project__desc span {
@@ -374,8 +378,14 @@ hr {
   background-color: lightgray;
 }
 
-.project:hover .project__desc {
+.project:hover .project__desc, .project {
   opacity: 1;
+}
+
+.project__img__3d {
+  max-height: 100%;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 /* Contact */
