@@ -39,9 +39,9 @@ body {
   width: 100%;
 }
 
-#navbar.navbar--dark {
+#navbar.navbar__dark {
   background-color: black;
-  transition: all .3s ease-in-out;
+  transition: all .35s ease-in-out;
   z-index: 100;
 }
 

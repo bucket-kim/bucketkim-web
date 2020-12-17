@@ -4,11 +4,12 @@
 
 const navbar = document.querySelector('#navbar');
 const navbarHeight = navbar.getBoundingClientRect().height;
+
 document.addEventListener('scroll', () => {
   if(window.scrollY > navbarHeight) {
-    navbar.classList.add('navbar--dark');
+    navbar.classList.add('navbar__dark');
   } else {
-    navbar.classList.remove('navbar--dark');
+    navbar.classList.remove('navbar__dark');
   }
 });
 
@@ -22,6 +23,30 @@ navbarMenu.addEventListener('click', (e) => {
   if (link == null) {
     return;
   }
-  const scrollTo = document.querySelector(link);
-  scrollTo.scrollIntoView({behavior: 'smooth'});
+  scrollToView(link);
 })
+
+// Handle click on Contact Me and logo to home
+
+const homeLogoBtn = document.querySelector(".navbar__homeLogo");
+homeLogoBtn.addEventListener('click', () => {
+  scrollToView("#home");
+});
+
+const contactBtn = document.querySelector('.home__contact');
+contactBtn.addEventListener('click', () => {
+  scrollToView('#contact');
+});
+
+// home display fade logic as we scroll down the page
+const home = document.querySelector('.home__container');
+const homeHeight = home.getBoundingClientRect().height;
+document.addEventListener('scroll', () => {
+  console.log(1 - (window.scrollY / homeHeight));
+  home.style.opacity = 1 - (window.scrollY / homeHeight);
+})
+
+const scrollToView = (selector) => {
+  const scrollTo = document.querySelector(selector);
+  scrollTo.scrollIntoView({behavior: 'smooth'});
+}
