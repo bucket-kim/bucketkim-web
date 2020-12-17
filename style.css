@@ -297,6 +297,8 @@ hr {
 
 .work__categories {
   margin: 40px;
+  display: flex;
+  justify-content: center;
 }
 
 #works h3 {
@@ -309,7 +311,11 @@ hr {
   border-radius: 4px;
   background-color: transparent;
   font-size: 20px;
-  padding: 8px 48px;
+  padding: 8px 24px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 20%;
 }
 
 .category__btn.active, 
@@ -327,9 +333,10 @@ hr {
   height: 24px;
   width: 24px;
   line-height: 24px;
-  position: relative;
+  position: absolute;
   display: inline-block;
-  top: -30px;
+  top: -20px;
+  right: 40px;
   opacity: 0;
   transition: all ease-in 0.3s;
   margin-left: 8px;
@@ -339,7 +346,7 @@ hr {
 .category__btn.active .category__count, 
 .category__btn:hover .category__count{
   opacity: 1;
-  top: 0;
+  top: 8px;
   border: none;
   outline: none;
 }
@@ -366,7 +373,7 @@ hr {
   margin: 4px;
   position: relative;
   border-radius: 4px;
-  box-shadow: 1px 1px 10px rgba(0, 0, 0, .2);
+  /* box-shadow: 1px 1px 5px rgba(0, 0, 0, .2); */
   overflow: hidden;
 }
 
@@ -494,10 +501,26 @@ hr {
     margin-right: 24px;
   }
 
+  h1 {
+    font-size: 48px;
+    font-weight: 800;
+  }
+
   #navbar {
     flex-direction: column;
     align-items: flex-start;
     background-color: black;
+    padding: 12px;
+  }
+
+  .navbar__logo img{
+    height: 30px;
+  }
+
+  .navbar__toggle-btn {
+    font-size: 20px;
+    top: 20px;
+    margin-right: 12px;
   }
 
   .home__main__title {
@@ -525,17 +548,65 @@ hr {
 
   .about__majors {
     flex-direction: column;
+    margin-top: 32px;
+    margin-bottom: 8px;
+  }
+
+  .job__logo {
+    height: 32px;
+  }
+
+  .job__desc {
+    margin-left: 2em;
+    font-size: small;
+  }
+
+  .job__period {
+    font-size: x-small;
+  }
+
+  .work__categories {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .category__btn {
+    font-size: 18px;
+    margin: 4px 0;
+    width: 100%;
+  }
+
+  .category__count {
+    right: 20px;
+    line-height: 24px;
   }
 
   .major {
     margin-bottom: 38px;
   }
 
+  .major__title h2, .major__desc {
+    margin: 4px;
+  }
+
   .skillset {
     flex-direction: column;
   }
 
+  .contact__email {
+    overflow-x: hidden;
+    font-size: 16px;
+  }
+
   .project {
     flex-grow: 1;
+  }
+
+  .arrow__up {
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    bottom: 20px;
+    right: 20px;
   }
 }
