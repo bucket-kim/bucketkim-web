@@ -102,6 +102,7 @@ hr {
   background: none;
   color: white;
   display: none;
+  cursor: pointer;
 }
 
 /* home */
@@ -467,7 +468,7 @@ hr {
   right: 50px;
   font-size: 36px;
   color: white;
-  background-color: #c7974f;
+  background-color: #e2a54a;
   border-radius: 50%;
   width: 50px;
   height: 50px;
@@ -496,6 +497,7 @@ hr {
   #navbar {
     flex-direction: column;
     align-items: flex-start;
+    background-color: black;
   }
 
   .home__main__title {
@@ -514,6 +516,11 @@ hr {
     text-align: center;
     width: 100%;
     display: none;
+    transition: all 0.25s ease-in;
+  }
+
+  .navbar__menu.open {
+    display: block;
   }
 
   .about__majors {

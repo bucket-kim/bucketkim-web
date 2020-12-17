@@ -13,6 +13,8 @@ document.addEventListener('scroll', () => {
   }
 });
 
+
+
 // handle scrolling when menu onclick happens 
 
 const navbarMenu = document.querySelector('.navbar__menu');
@@ -23,8 +25,16 @@ navbarMenu.addEventListener('click', (e) => {
   if (link == null) {
     return;
   }
+  navbarMenu.classList.remove('open');
   scrollToView(link);
-})
+});
+
+// navbar menu toggle
+
+const menuToggle = document.querySelector('.navbar__toggle-btn');
+menuToggle.addEventListener('click', () => {
+  navbarMenu.classList.toggle('open');
+});
 
 // Handle click on Contact Me and logo to home
 
@@ -69,6 +79,13 @@ workBtnContainer.addEventListener('click', (e) => {
   if (filter == null) {
     return;
   };
+
+  //keep selected item highlighted
+  const active = document.querySelector('.category__btn.active');
+  active.classList.remove('active');
+  const target = e.target.nodeName === 'BUTTON' ? e.target : e.target.parentNode;
+  target.classList.add('active');
+
   projectContainer.classList.add('animate');
   setTimeout(() => {
     projects.forEach((project) => {
