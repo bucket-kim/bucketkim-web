@@ -213,35 +213,20 @@ hr {
   height: 40px;
 }
 
-.about__jobs {
+.job__list {
   display: flex;
-  justify-content: flex-start;
+  margin-bottom: 2em;
   align-items: center;
-  margin-left: 24px;
-}
-
-.job__image {
-  display: flex;
-  flex-direction: column;
-  margin-right: 5em;
-}
-
-.job__logo {
-  margin: 16px auto;
 }
 
 .job__desc {
-  margin: 30px auto;
   text-align: left;
-}
-
-.job__name, .job__period {
-  color: var(--color-gray);
+  margin-left: 4em;
+  color: gray;
 }
 
 .job__period {
   font-size: small;
-  padding-top: 4px;
 }
 
 /* skills */
@@ -257,7 +242,12 @@ hr {
 }
 
 .section__container p {
-  margin-bottom: 36px;
+  margin-bottom: 8px;
+}
+
+.skillAtt__desc {
+  margin-bottom: 3em;
+  margin-top: 1.5em;
 }
 
 .skillset__left {
@@ -456,6 +446,25 @@ hr {
   font-weight: 100;
   font-size: small;
   margin-top: 20px;
+}
+
+/* arrow up */
+.arrow__up {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  font-size: 36px;
+  color: white;
+  background-color: #c7974f;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  border: none;
+  display: none;
+} 
+
+.arrow__up.visible {
+  display: block;
 }
 
 /* size below 768 px screen width */

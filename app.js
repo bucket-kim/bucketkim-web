@@ -42,9 +42,10 @@ contactBtn.addEventListener('click', () => {
 const home = document.querySelector('.home__container');
 const homeHeight = home.getBoundingClientRect().height;
 document.addEventListener('scroll', () => {
-  console.log(1 - (window.scrollY / homeHeight));
   home.style.opacity = 1 - (window.scrollY / homeHeight);
-})
+});
+
+
 
 const scrollToView = (selector) => {
   const scrollTo = document.querySelector(selector);
