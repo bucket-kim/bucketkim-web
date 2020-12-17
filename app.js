@@ -45,7 +45,42 @@ document.addEventListener('scroll', () => {
   home.style.opacity = 1 - (window.scrollY / homeHeight);
 });
 
+// Arrow Up visibility function when scrolling down
+const arrow = document.querySelector('.arrow__up');
+document.addEventListener('scroll', () => {
+  if (window.scrollY > homeHeight / 2) {
+    arrow.classList.add('visible');
+  } else {
+    arrow.classList.remove('visible')
+  };
+});
 
+arrow.addEventListener('click', () => {
+  scrollToView('#home')
+});
+
+// filter projects based on sections
+const workBtnContainer = document.querySelector('.work__categories');
+const projectContainer = document.querySelector('.work__projects');
+const projects = document.querySelectorAll('.project');
+
+workBtnContainer.addEventListener('click', (e) => {
+  const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
+  if (filter == null) {
+    return;
+  };
+  projectContainer.classList.add('animate');
+  setTimeout(() => {
+    projects.forEach((project) => {
+      if(filter === '*' || filter === project.dataset.type) {
+        project.classList.remove('invisible');
+      } else {
+        project.classList.add('invisible');
+      }
+    });
+    projectContainer.classList.remove('animate');
+  }, 250);
+});
 
 const scrollToView = (selector) => {
   const scrollTo = document.querySelector(selector);

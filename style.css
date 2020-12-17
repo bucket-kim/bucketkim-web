@@ -347,6 +347,13 @@ hr {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  opacity: 1;
+  transition: all 0.25s ease-out;
+}
+
+.work__projects.animate {
+  opacity: 0;
+  transform: scale(0.96) translateY(40px);
 }
 
 .project {
@@ -361,6 +368,11 @@ hr {
   box-shadow: 1px 1px 10px rgba(0, 0, 0, .2);
   overflow: hidden;
 }
+
+.project.invisible {
+  display: none;
+}
+
 
 .project__img {
   max-width: 100%;
@@ -460,23 +472,41 @@ hr {
   width: 50px;
   height: 50px;
   border: none;
-  display: none;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease-in;
 } 
 
 .arrow__up.visible {
-  display: block;
+  opacity: 1;
+  pointer-events: auto;
+  cursor: pointer;
 }
+
+
 
 /* size below 768 px screen width */
 
 @media screen and (max-width: 768px) {
   .navbar__toggle-btn {
     display: block;
+    margin-right: 24px;
   }
 
   #navbar {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .home__main__title {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+  }
+
+  .home__description h1 {
+    font-size: 24px;
+    letter-spacing: .75em;
   }
 
   .navbar__menu {
